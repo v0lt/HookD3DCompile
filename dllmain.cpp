@@ -4,8 +4,6 @@ struct IUnknown; // Workaround for "combaseapi.h(229): error C2187: syntax error
 #include <stdio.h>
 #include "./minhook/minhook/include/MinHook.h"
 
-#pragma comment(lib, "d3dcompiler.lib")
-
 pD3DCompile pOrigD3DCompile = nullptr;
 HRESULT WINAPI pNewD3DCompile(
 	_In_reads_bytes_(SrcDataSize) LPCVOID pSrcData,
