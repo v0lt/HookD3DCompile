@@ -21,13 +21,13 @@ HRESULT WINAPI pNewD3DCompile(
 	static int num = 1;
 	char buff[MAX_PATH];
 
-	sprintf_s(buff, "D3DCompile() is called. ID = %3d", num);
+	sprintf_s(buff, "D3DCompile() is called. ID = %03d", num);
 	OutputDebugStringA(buff);
 
 	if (pSourceName) {
-		sprintf_s(buff, "C:\\TEMP\\%3d_%s_%s.hlsl", num, pSourceName, pTarget);
+		sprintf_s(buff, "C:\\TEMP\\%03d_%s_%s.hlsl", num, pSourceName, pTarget);
 	} else {
-		sprintf_s(buff, "C:\\TEMP\\%3d_%s_.hlsl", num, pTarget);
+		sprintf_s(buff, "C:\\TEMP\\%03d_%s.hlsl", num, pTarget);
 	}
 
 	if (SrcDataSize > 0) {
